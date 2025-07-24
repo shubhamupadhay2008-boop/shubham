@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Site</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    nav {
+      background: rgba(57, 55, 55, 0.6);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    header {
+      padding: 60px 30px;
+      max-width: 600px;
+    }
+
+    header h1 { font-size: 48px; margin-bottom: 10px; }
+    header h2 { font-size: 32px; margin-bottom: 10px; }
+    header h3 { font-size: 20px; }
+
+    .gallery, .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .gallery img,
+    .videos video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .gallery img:hover,
+    .videos video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+      header h2 { font-size: 24px; }
+      header h3 { font-size: 16px; }
+    }
+
+    /* Footer Style */
+    .footer {
+      background-color: #1d1f21;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-left,
+    .footer-right {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+
+    .footer-left p,
+    .footer-right p,
+    .footer-right h3,
+    .footer-left a {
+      margin: 10px 0;
+      position: relative;
+      display: inline-block;
+      transition: 0.3s ease;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-left p:hover,
+    .footer-right p:hover,
+    .footer-left a:hover,
+    .footer-right h3:hover {
+      color: gold;
+      text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-left p::after,
+    .footer-left a::after,
+    .footer-right h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: gold;
+      transition: width 0.3s ease;
+    }
+
+    .footer-left p:hover::after,
+    .footer-left a:hover::after,
+    .footer-right h3:hover::after {
+      width: 100%;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .social-icons img {
+      width: 25px;
+      height: 25px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: translateY(-4px) scale(1.1);
+      filter: drop-shadow(0 0 6px gold);
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>🌐 PremiumSite</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#video">Videos</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Welcome to Premium Site</h1>
+    <h2>Nalasopara East Ambawadi Tulinj Road Near By Divine Providence</h2>
+    <h3>Responsive Design, Smooth Effects, and Clean Look</h3>
+  </header>
+
+  <section class="gallery" id="gallery">
+    <img src="ganpati1.png" />
+    <img src="ganpati2.jpg" />
+    <img src="ganpati3.jpg" />
+    <img src="ganpati4.jpg" />
+    <img src="ganpati5.jpg" />
+    <img src="ganpati6.jpg" />
+    <img src="ganpati7.jpg" />
+    <img src="ganpati8.jpg" />
+    <img src="ganpati9.jpg" />
+    <img src="ganpati10.jpg" />
+    <img src="click1.jpg" />
+    <img src="click2.jpg" />
+    <img src="click3.jpg" />
+    <img src="click4.jpg" />
+    <img src="ganpati card.png" />
+  </section>
+
+  <section class="videos" id="video">
+    <video src="vid1.mp4" controls></video>
+    <video src="vid2.mp4" controls></video>
+    <video src="vid3.mp4" controls></video>
+    <video src="vid4.mp4" controls></video>
+    <video src="vid5.mp4" controls></video>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="Contact">
+    <div class="footer-container">
+      <!-- Contact Info -->
+      <div class="footer-left">
+        <p><span class="icon">📍</span> Nalasopara East Ambawadi tulinj Road near by divine providence  <br>palghar, 401209</p>
+        <p><span class="icon">📞</span> +7208695872</p>
+        <p><span class="icon">✉️</span> <a href="mailto:support@company.com">support@company.com</a></p>
+      </div>
+
+      <!-- About & Social -->
+      <div class="footer-right">
+        <h3>About the company</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/shubhamupadhayay12/"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png" alt="YouTube"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/18787/18787025.png" alt="Telegram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
